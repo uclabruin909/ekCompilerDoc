@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ektron Compiler Documentation</title>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+<header>
+
+	<div class="container">
+		<div class="row">
+			<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+				<div class="navbar-header">
+				  <a href="#">Ektron Compiler Documentation</a>
+				</div>
+			</div>
+		</div> 
+	</div>
+
+</header>
+
+
+<main>
+	<div class="container-fluid">
+		<div class="row">
+
+			<!-- SIDEBAR -->
+			<div id="left" class="col-sm-4">
+
+				<!-- CONFIGURATION -->			
+				<ul id="configuration-group" class="nav menu">  
+					<li class="item-1 deeper parent">
+					  <a class="group-header" href="#">
+					      <span data-toggle="collapse" data-parent="#configuration-group" href="#configuration-item-1" class="sign"><i class="glyphicon glyphicon-plus-sign icon-white"></i></span>
+					      <span class="lbl">Configuration</span>                      
+					  </a>
+					  <ul class="children nav-child unstyled small collapse-in" id="configuration-item-1">
+					      <li class="item-2 deeper parent">
+					          <a class="" href="#">
+					              <span data-toggle="collapse" data-parent="#configuration-group" href="#configuration-item-2" class="sign"><i class="glyphicon glyphicon-plus-sign icon-white"></i></span>
+					              <span class="lbl">compileConfig.json</span> 
+					          </a>
+					          <ul class="children nav-child unstyled small collapse" id="configuration-item-2">
+					              <li class="item-3 current">
+					                  <a class="" href="#">
+					                      <span class="sign"><i class="icon-play"></i></span>
+					                      <span class="lbl">Menu 1.1</span>
+					                  </a>
+					              </li>
+					              <li class="item-4">
+					                  <a class="" href="#">
+					                      <span class="sign"><i class="icon-play"></i></span>
+					                      <span class="lbl">Menu 1.2</span> 
+					                  </a>
+					              </li>                                
+					          </ul>
+					      </li>
+					      <li class="item-5 deeper parent">
+					          <a class="" href="#">
+					              <span data-toggle="collapse" data-parent="#menu-group-1" href="#sub-item-5" class="sign"><i class="glyphicon glyphicon-plus-sign icon-white"></i></span>
+					              <span class="lbl">assetFile.json</span> 
+					          </a>
+					          <ul class="children nav-child unstyled small collapse" id="sub-item-5">
+					              <li class="item-6">
+					                  <a class="" href="#">
+					                      <span class="sign"><i class="icon-play"></i></span>
+					                      <span class="lbl">Menu 2.1</span>                                    
+					                  </a>
+					              </li>
+					              <li class="item-7">
+					                  <a class="" href="#">
+					                      <span class="sign"><i class="icon-play"></i></span>
+					                      <span class="lbl">Menu 2.2</span>                                    
+					                  </a>
+					              </li>
+					          </ul>
+					      </li>
+					  </ul>
+					</li>                 			
+				</ul>
+
+				<!-- COMMANDS -->
+				<ul id="command-group" class="nav menu">  
+					<li class="item-1 deeper parent">
+					  <a class="group-header" href="#">
+					      <span data-toggle="collapse" data-parent="#command-group" href="#command-item-1" class="sign"><i class="glyphicon glyphicon-plus-sign icon-white"></i></span>
+					      <span class="lbl">Commands</span>                      
+					  </a>
+					  <ul class="children nav-child unstyled small collapse-in" id="command-item-1">
+					    <li><a href=""><span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>init</a></li>
+					    <li><a href=""><span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>remove</a></li>
+					    <li><a href=""><span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>compileAll</a></li>
+					    <li><a href=""><span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>compile</a></li>
+					  </ul>
+					</li>                 			
+				</ul>
+
+				<!-- COMPILER TAGS -->			
+				<ul id="compilerTag-group" class="nav menu">  
+					<li class="item-1 deeper parent">
+					  <a class="group-header" href="#">
+					      <span data-toggle="collapse" data-parent="#compilerTag-group" href="#compilerTag-item-1" class="sign"><i class="glyphicon glyphicon-plus-sign icon-white"></i></span>
+					      <span class="lbl">Compiler Tags</span>                      
+					  </a>
+					  <ul class="children nav-child unstyled small collapse-in" id="compilerTag-item-1">
+					      <li class="item-2 deeper parent">
+					          <a class="" href="#">
+					              <span data-toggle="collapse" data-parent="#compilerTag-group" href="#compilerTag-item-2" class="sign"><i class="glyphicon glyphicon-plus-sign icon-white"></i></span>
+					              <span class="lbl">ek-section</span> 
+					          </a>
+					          <ul class="children nav-child unstyled small collapse" id="compilerTag-item-2">
+					              <li class="item-3 current">
+					                  <a class="" href="#">
+					                     <span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>
+					                     header
+					                  </a>
+					              </li>
+					              <li class="item-4">
+					                  <a class="" href="#">
+					                     <span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>
+					                     body
+					                  </a>
+					              </li>
+					              <li class="item-4">
+					                  <a class="" href="#">
+					                     <span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>
+					                     footer
+					                  </a>
+					              </li> 					                                              
+					          </ul>
+					      </li>
+
+					      <!-- //ek-types -->
+					      <li class="item-2 deeper parent">
+					          <a class="" href="#">
+					              <span data-toggle="collapse" data-parent="#compilerTag-group" href="#ek-type-group" class="sign"><i class="glyphicon glyphicon-plus-sign icon-white"></i></span>
+					              <span class="lbl">ek-type</span> 
+					          </a>
+					          <ul class="children nav-child unstyled small collapse" id="ek-type-group">
+					              <li class="item-3 current">
+					                  <a class="" href="#">
+					                     <span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>
+					                     content
+					                  </a>
+					              </li>
+					              <li class="item-4">
+					                  <a class="" href="#">
+					                     <span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>
+					                     body
+					                  </a>
+					              </li>
+					              <li class="item-4">
+					                  <a class="" href="#">
+					                     <span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>
+					                     footer
+					                  </a>
+					              </li> 					                                              
+					          </ul>
+					      </li>
+
+					      <!-- //ek-source -->
+					      <li class="item-2 deeper parent">
+					          <a class="" href="#">
+					              <span data-toggle="collapse" data-parent="#compilerTag-group" href="#ek-source-group" class="sign"><i class="glyphicon glyphicon-plus-sign icon-white"></i></span>
+					              <span class="lbl">ek-source</span> 
+					          </a>
+					          <ul class="children nav-child unstyled small collapse" id="ek-source-group">
+					              <li class="item-3 current">
+					                  <a class="" href="#">
+					                     <span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>
+					                     link
+					                  </a>
+					              </li>
+					              <li class="item-4">
+					                  <a class="" href="#">
+					                     <span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>
+					                     script
+					                  </a>
+					              </li>					                                              
+					          </ul>
+					      </li>
+					  </ul>
+					</li>                 			
+				</ul>
+
+
+			</div> <!-- /#left.col-sm-3 -->
+
+			<!-- DOCUMENT BODY -->
+			<div id="docBody" class="col-sm-8">
+
+				<section id="section-configuration">
+					<!-- Section TITLE -->
+					<h3>Configuration</h3>
+
+					<!-- compileConfig article -->					
+					<article id="article-configJson">
+						<h4>compileConfig.json</h4>
+						<p>The compileConfig.json file is used to configure the compiler prior to initializing.  It contains relevant project information such as the "Company Name" , "Project Name", the date the project was started on, etc. The most imporant configuration that needs to be done is setting the root directory where the project folder will be created and setting the source file that will be used to compiled each of the different UserControls and Layout files.</p>
+
+
+							<img src="img/compileConfig.png" alt="">
+
+
+						<ul class="list-description">
+							<li>
+								<p>
+									<span><i class="glyphicon glyphicon-plus"></i>companyName:</span>
+								</p>
+							</li>
+							<li>
+								<p>
+									<span><i class="glyphicon glyphicon-plus"></i>projectName:</span>
+								</p>
+							</li>
+							<li>
+								<p>
+									<span><i class="glyphicon glyphicon-plus"></i>projectDate:</span>
+								</p>
+							</li>
+							<li>
+								<p>
+									<span><i class="glyphicon glyphicon-plus"></i>rootDir:</span>
+								</p>
+							</li>
+							<li>
+								<p>
+									<span><i class="glyphicon glyphicon-plus"></i>initDirectories:</span>
+								</p>
+							</li>
+							<li>
+								<p>
+									<span><i class="glyphicon glyphicon-plus"></i>UserControls.file:</span>
+								</p>
+							</li>																														
+
+						</ul>
+					</article>					
+				</section>
+
+			</div> <!-- /.col-sm-9 -->
+
+
+		</div> <!-- /.row -->		
+	</div><!--  /.container -->
+</main>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+	<script type="text/javascript">
+			!function ($) {
+    
+    // Le left-menu sign
+    /* for older jquery version
+    $('#left ul.nav li.parent > a > span.sign').click(function () {
+        $(this).find('i:first').toggleClass("icon-minus");
+    }); */
+    
+    $(document).on("click","#left ul.nav li.parent > a > span.sign", function(){          
+        var $tarLink = $(this).find('i:first');
+
+        if ( $tarLink.hasClass('glyphicon-minus-sign') ) {
+        	$tarLink.removeClass('glyphicon-minus-sign')
+        		.addClass('glyphicon-plus-sign');
+        }
+
+        else {
+          $tarLink.removeClass('glyphicon-plus-sign')
+      		.addClass('glyphicon-minus-sign');    	
+        }
+   
+    }); 
+    
+
+
+}(window.jQuery);
+	</script>
+</body>
+</html>
