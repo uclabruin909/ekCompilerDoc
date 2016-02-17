@@ -243,6 +243,31 @@
             </ul>
           </section>
 
+          <!-- assetFile.json article -->
+          <section id="article-configJson">
+            <h4>assetFile.json</h4>
+            <p>Within the assetFile.json, you can create a JSON object with the asset key and it's Ektron content ID.  When you specify an <b>ek-asset="[key]"</b>, the content will be compiled with the appropriate path.  This will make asset management much more maintainable and will save time with the initial configuration.</p>
+
+            <p><strong>EXAMPLE:</strong></p>
+
+            <p>
+              1.  Configure the assetFile.json by specifying the asset key and it's corresponding ID.  In this example, we will be focusing on using the <strong>"section-about-image"</strong>.
+              <img src="./img/assetFile.png" alt="">
+            </p>
+
+            <p>
+              2.  Once an asset and it's key has been configured in the assetFile.json, you can use the <strong>ek-asset="[key]" attribute on the desired element to automatically have the compiled source point to the appropriate id.  In this example, we see which element is given this attribute.</strong>
+              <img src="./img/assetFileHTML.png" alt="">
+            </p>
+
+            <p>
+              3.  Once the content is compiled, you can see that the src has been changed to the correct ID.
+              <img src="./img/assetFileCompiled.png" alt="">
+            </p>
+
+          </section>
+
+
         </article> <!-- /end #section-configuration -->
 
 
@@ -251,35 +276,83 @@
           <!-- Section TITLE -->
           <h2>Commands</h2>
 
+
           <!-- init method section -->
           <section id="article-init">
             <h4>init</h4>
-            <p>This command is used to initialize the project folder.  Before any compiling can be done, this directory needs to be executed.  This command will create the base project folder in the rootDir path assigned in the <b>compileConfig.json</b> file.</p>
+            <p>After the compiler has been configured, the <strong>init</strong> command is used to initialize the project folder.  Before any compiling can be done, this directory needs to be executed.  This command will create the base project folder in the rootDir path assigned in the <b>compileConfig.json</b> file.</p>
 
-            <div class="row article-img">
-              <div class="col-sm-6"></div>
-              <div class="col-sm-6"></div>
-            </div>
+            <p><strong>EXAMPLE:</strong></p>
+
+            <p>
+              By running the <strong>init</strong> command in the terminal, the project directory will be initialized using the information that was configured within the compileConfig.json file.
+              <img src="./img/initCommand.png" alt="">
+              <img src="./img/initResult.png" alt="">
+            </p>
 
           </section>
 
           <!-- remove method section -->
           <section id="article-remove">
             <h4>remove</h4>
-            <p>This command is used to initialize the project folder.  Before any compiling can be done, this directory needs to be executed.  This command will create the base project folder in the rootDir path assigned in the <b>compileConfig.json</b> file.</p>
+            <p>If you want to permanently remove the initialized project directory, simply run the <strong>remove</strong> command in the terminal.
+              <img src="img/removeCommand.png" alt="">
+            </p>
 
           </section>
 
-          <!-- compileAll method section -->
-          <section id="article-compileAll">
-            <h4>compileAll</h4>
-            <p>This command is used to initialize the project folder.  Before any compiling can be done, this directory needs to be executed.  This command will create the base project folder in the rootDir path assigned in the <b>compileConfig.json</b> file.</p>
-
-          </section>
 
           <!-- compile method section -->
           <section id="article-compile">
             <h4>compile [filename]</h4>
+            <p>To compile each file individually, use the <strong>compile [filename]</strong> command.  The compiler will use the srcFile assigned to that particular file to compile.</p>
+
+            <p>
+              List of different files:
+            </p>
+
+            <ul>
+              <strong><li>Smarsh_Head</li></strong>
+              <strong><li>Smarsh_Header</li></strong>
+              <strong><li>Smarsh_Footer</li></strong>
+              <strong><li>Hero-01</li></strong>
+              <strong><li>Full</li></strong>
+              <strong><li>100-100-100</li></strong>
+              <strong><li>25-25-25-25</li></strong>
+              <strong><li>25-50-25</li></strong>
+              <strong><li>33-33-33</li></strong>
+              <strong><li>50-50</li></strong>
+              <strong><li>75-25</li></strong>
+              <strong><li>25-25-25-25</li></strong>
+              <strong><li>Nav-Left-100-100-100</li></strong>
+              <strong><li>Nav-Right-100-100-100</li></strong>
+            </ul>
+
+            <p><strong>EXAMPLE:</strong></p>
+            <p>
+              If I want to just compile the <strong>Smarsh_Header.ascx</strong> file, I would run the following command:
+              <img src="img/compileCommand.png" alt="">
+            </p>
+
+            <p>
+              You can see that in our project directory, that only the <strong>Smarsh_Header</strong> file has been compiled and nothing else.
+              <img src="img/compileResult.png" alt="">
+            </p>
+
+          </section>
+
+
+          <!-- compileAll method section -->
+          <section id="article-compileAll">
+            <h4>compileFiles</h4>
+            <p>Often times, not all of our files will be used as the srcFile for a UserControls or Layouts file.  However, if you still want to compile a group of files, you can use the <strong>compileFiles</strong> command to do so.  You specify these files within the <strong>compileFiles</strong> array property in the compileConfig.json file.</p>
+
+          </section>
+
+
+          <!-- compileAll method section -->
+          <section id="article-compileAll">
+            <h4>compileAll</h4>
             <p>This command is used to initialize the project folder.  Before any compiling can be done, this directory needs to be executed.  This command will create the base project folder in the rootDir path assigned in the <b>compileConfig.json</b> file.</p>
 
           </section>
