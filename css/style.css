@@ -1,6 +1,6 @@
 body {
-    font-family: "Raleway", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    font-weight: 300;    
+    font-family: "Raleway", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
 }
 
 a {
@@ -115,4 +115,15 @@ ul.list-description span{
 
 ul.list-description span i{
     margin-right: 5px;
+}
+
+
+h4 {
+  color: #337ab7;
+  font-weight: bold;
+}
+
+section {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
