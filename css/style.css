@@ -15,6 +15,11 @@ span {
 a:visited, a:active{
     text-decoration: none;
 }
+
+h4 {
+
+}
+
 /* HEADER NAV
 -------------------------- */
 header {
@@ -117,8 +122,11 @@ ul.list-description span i{
     margin-right: 5px;
 }
 
+h2 {
+  font-weight: bold;
+}
 
-h4 {
+h3, h4 {
   color: #337ab7;
   font-weight: bold;
 }
