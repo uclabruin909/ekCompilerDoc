@@ -3,6 +3,8 @@
 <head>
   <title>Ektron Compiler Documentation</title>
 
+  <link rel="stylesheet" type="text/css" href="https://www.google.com/fonts#UsePlace:use/Collection:Raleway:400,200italic,100italic,100,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic">
+
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -201,7 +203,7 @@
 
           <!-- compileConfig article -->
           <section id="article-configJson">
-            <h4>compileConfig.json</h4>
+            <h3>compileConfig.json</h3>
             <p>The compileConfig.json file is used to configure the compiler prior to initializing.  It contains relevant project information such as the "Company Name" , "Project Name", the date the project was started on, etc. The most imporant configuration that needs to be done is setting the root directory where the project folder will be created and setting the source file that will be used to compile each of the different UserControls and Layout files.</p>
 
 
@@ -273,7 +275,7 @@
 
           <!-- assetFile.json article -->
           <section id="article-configJson">
-            <h4>assetFile.json</h4>
+            <h3>assetFile.json</h3>
             <p>Within the assetFile.json, you can create a JSON object with the asset key and it's Ektron content ID.  When you specify an <b>ek-asset="[key]"</b>, the content will be compiled with the appropriate path.  This will make asset management much more maintainable and will save time with the initial configuration.</p>
 
             <p><strong>EXAMPLE:</strong></p>
@@ -307,7 +309,7 @@
 
           <!-- init method section -->
           <section id="article-init">
-            <h4>init</h4>
+            <h3>init</h3>
             <p>After the compiler has been configured, the <strong>init</strong> command is used to initialize the project folder.  Before any compiling can be done, this directory needs to be executed.  This command will create the base project folder in the rootDir path assigned in the <b>compileConfig.json</b> file.</p>
 
             <p><strong>EXAMPLE:</strong></p>
@@ -322,7 +324,7 @@
 
           <!-- remove method section -->
           <section id="article-remove">
-            <h4>remove</h4>
+            <h3>remove</h3>
             <p>If you want to permanently remove the initialized project directory, simply run the <strong>remove</strong> command in the terminal.
               <img src="img/removeCommand.png" alt="">
             </p>
@@ -332,11 +334,11 @@
 
           <!-- compile method section -->
           <section id="article-compile">
-            <h4>compile [filename]</h4>
+            <h3>compile [filename]</h3>
             <p>To compile each file individually, use the <strong>compile [filename]</strong> command.  The compiler will use the srcFile assigned to that particular file to compile.</p>
 
             <p>
-              List of different files:
+              List of different file names:
             </p>
 
             <ul>
@@ -372,7 +374,7 @@
 
           <!-- compileAll method section -->
           <section id="article-compileAll">
-            <h4>compileFiles</h4>
+            <h3>compileFiles</h3>
             <p>Often times, not all of our files will be used as the srcFile for a UserControls or Layouts file.  However, if you still want to compile a group of files, you can use the <strong>compileFiles</strong> command to do so.  You specify these files within the <strong>compileFiles</strong> array property in the compileConfig.json file.</p>
 
 
@@ -388,8 +390,8 @@
 
           <!-- compileAll method section -->
           <section id="article-compileAll">
-            <h4>compileAll</h4>
-            <p>This command is used to initialize the project folder.  Before any compiling can be done, this directory needs to be executed.  This command will create the base project folder in the rootDir path assigned in the <b>compileConfig.json</b> file.</p>
+            <h3>compileAll</h3>
+            <p>To compile everything at once, use the <strong>compileAll</strong> command.  This will compile all UserControls and Layouts files using the srcFile assigned to each of the files in the compileConfig.json. </p>
 
           </section>
 
@@ -404,8 +406,18 @@
 
           <!-- ek-section="header" -->
           <section id="article-ek-section-header">
-            <h4>ek-section = "header"</h4>
-            <p>Within the srcFile that is configured to compile the Smarsh_Header.ascx, you must wrap the section of the HTML with an element containing the <strong>ek-section="header"</strong> attribute.  This will allow the compiler to designate which area will be compiled into Smarsh.Header.ascx while omitting the rest of the file.</p>
+            <h3>ek-section = "head" || "header" || "body" </h3>
+            <p>Within the srcFile that is configured to compile the Smarsh_Header.ascx, you must wrap the section of the HTML with an element containing the <strong>ek-section="header"</strong> attribute.  This will allow the compiler to designate which area of the HTML that will be used to compile the Smarsh.Header.ascx file.</p>
+
+            <p><strong>EXAMPLE:</strong></p>
+
+
+          </section>
+
+          <!-- ek-section="header" -->
+          <section id="article-ek-section-header">
+            <h3>ek-section = "header"</h3>
+            <p>Within the srcFile that is configured to compile the Smarsh_Header.ascx, you must wrap the section of the HTML with an element containing the <strong>ek-section="header"</strong> attribute.  This will allow the compiler to designate which area of the HTML that will be used to compile the Smarsh.Header.ascx file.</p>
 
             <p><strong>EXAMPLE:</strong></p>
 
@@ -416,7 +428,7 @@
 
           <!-- ek-section="body" -->
           <section id="article-ek-section-body">
-            <h4>ek-section = "body"</h4>
+            <h3>ek-section = "body"</h3>
             <p>Within the srcFile that is configured to compile the Smarsh_Header.ascx, you must wrap the section of the HTML with an element containing the <strong>ek-section="header"</strong> attribute.  This will allow the compiler to designate which area will be compiled into Smarsh.Header.ascx while omitting the rest of the file.</p>
 
             <p><strong>EXAMPLE:</strong></p>
@@ -425,7 +437,7 @@
 
           <!-- ek-section="footer" -->
           <section id="article-ek-section-footer">
-            <h4>ek-section = "footer"</h4>
+            <h3>ek-section = "footer"</h3>
             <p>Within the srcFile that is configured to compile the Smarsh_Header.ascx, you must wrap the section of the HTML with an element containing the <strong>ek-section="header"</strong> attribute.  This will allow the compiler to designate which area will be compiled into Smarsh.Header.ascx while omitting the rest of the file.</p>
 
             <p><strong>EXAMPLE:</strong></p>
