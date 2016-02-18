@@ -3,6 +3,8 @@
 <head>
   <title>Ektron Compiler Documentation</title>
 
+  <link rel="stylesheet" type="text/css" href="https://www.google.com/fonts#UsePlace:use/Collection:Lato:400,300,300italic,400italic,700,700italic,900,900italic">
+
   <link rel="stylesheet" type="text/css" href="https://www.google.com/fonts#UsePlace:use/Collection:Raleway:400,200italic,100italic,100,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic">
 
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -109,7 +111,9 @@
                   <span data-toggle="collapse" data-parent="#compilerTag-group" href="#compilerTag-item-1" class="sign"><i class="glyphicon glyphicon-plus-sign icon-white"></i></span>
                   <span class="lbl">Compiler Tags</span>
               </a>
+
               <ul class="children nav-child unstyled small collapse-in" id="compilerTag-item-1">
+
                   <li class="item-2 deeper parent">
                       <a class="" href="#">
                           <span data-toggle="collapse" data-parent="#compilerTag-group" href="#compilerTag-item-2" class="sign"><i class="glyphicon glyphicon-plus-sign icon-white"></i></span>
@@ -137,6 +141,9 @@
                       </ul>
                   </li>
 
+                  <li><a href=""><span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>ek-asset</a></li>
+
+                  <li><a href=""><span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>ek-name</a></li>
                   <!-- //ek-types -->
                   <li class="item-2 deeper parent">
                       <a class="" href="#">
@@ -199,11 +206,11 @@
         <!-- CONFIGURATION SECTION -->
         <article id="section-configuration">
           <!-- Section TITLE -->
-          <h2>Configuration</h2>
+          <h1>Configuration</h1>
 
           <!-- compileConfig article -->
           <section id="article-configJson">
-            <h3>compileConfig.json</h3>
+            <h2>compileConfig.json</h2>
             <p>The compileConfig.json file is used to configure the compiler prior to initializing.  It contains relevant project information such as the "Company Name" , "Project Name", the date the project was started on, etc. The most imporant configuration that needs to be done is setting the root directory where the project folder will be created and setting the source file that will be used to compile each of the different UserControls and Layout files.</p>
 
 
@@ -275,7 +282,7 @@
 
           <!-- assetFile.json article -->
           <section id="article-configJson">
-            <h3>assetFile.json</h3>
+            <h2>assetFile.json</h2>
             <p>Within the assetFile.json, you can create a JSON object with the asset key and it's Ektron content ID.  When you specify an <b>ek-asset="[key]"</b>, the content will be compiled with the appropriate path.  This will make asset management much more maintainable and will save time with the initial configuration.</p>
 
             <p><strong>EXAMPLE:</strong></p>
@@ -304,12 +311,12 @@
         <!-- COMMANDS SECTION -->
         <article id="section-commands">
           <!-- Section TITLE -->
-          <h2>Commands</h2>
+          <h1>Commands</h1>
 
 
           <!-- init method section -->
           <section id="article-init">
-            <h3>init</h3>
+            <h2>init</h2>
             <p>After the compiler has been configured, the <strong>init</strong> command is used to initialize the project folder.  Before any compiling can be done, this directory needs to be executed.  This command will create the base project folder in the rootDir path assigned in the <b>compileConfig.json</b> file.</p>
 
             <p><strong>EXAMPLE:</strong></p>
@@ -324,7 +331,7 @@
 
           <!-- remove method section -->
           <section id="article-remove">
-            <h3>remove</h3>
+            <h2>remove</h2>
             <p>If you want to permanently remove the initialized project directory, simply run the <strong>remove</strong> command in the terminal.
               <img src="img/removeCommand.png" alt="">
             </p>
@@ -334,7 +341,7 @@
 
           <!-- compile method section -->
           <section id="article-compile">
-            <h3>compile [filename]</h3>
+            <h2>compile [filename]</h2>
             <p>To compile each file individually, use the <strong>compile [filename]</strong> command.  The compiler will use the srcFile assigned to that particular file to compile.</p>
 
             <p>
@@ -374,7 +381,7 @@
 
           <!-- compileAll method section -->
           <section id="article-compileAll">
-            <h3>compileFiles</h3>
+            <h2>compileFiles</h2>
             <p>Often times, not all of our files will be used as the srcFile for a UserControls or Layouts file.  However, if you still want to compile a group of files, you can use the <strong>compileFiles</strong> command to do so.  You specify these files within the <strong>compileFiles</strong> array property in the compileConfig.json file.</p>
 
 
@@ -390,7 +397,7 @@
 
           <!-- compileAll method section -->
           <section id="article-compileAll">
-            <h3>compileAll</h3>
+            <h2>compileAll</h2>
             <p>To compile everything at once, use the <strong>compileAll</strong> command.  This will compile all UserControls and Layouts files using the srcFile assigned to each of the files in the compileConfig.json. </p>
 
           </section>
@@ -402,48 +409,171 @@
         <!-- COMPILER TAG SECTION -->
         <article id="section-compilerTag">
           <!-- Section TITLE -->
-          <h2>Compiler Tags</h2>
+          <h1>Compiler Tags</h1>
 
-          <!-- ek-section="header" -->
-          <section id="article-ek-section-header">
-            <h3>ek-section = "head" || "header" || "body" </h3>
+          <!-- ARTICLE : EK-SECTION -->
+          <section id="article-ek-section">
+            <h2>ek-section</h2>
+            <p>The <strong>ek-section</strong> attribute allows the user to designate the areas of the HTML that will be compiled.  By segmenting different parts of the HTML with an ek-section element, the compiler will know exactly which block of HTML to use to compile the Smarsh_Header, Smarsh_Footer as well as the different layout files.  Remember, it will use the srcFile specified in the compileConfig.json file.</p>
+
+            <ul class="list-description">
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>header:</span>
+                  Within the srcFile configured to compile the <strong>Smarsh_Header</strong>, wrap the appropriate block of HTML that will be used for the compilation of the header.  The compiler will parse this particular block of HTML, compile the different aspects of it, and then create the Smarsh_Header.ascx file inside the UserControls directory.
+                </p>
+
+                <p><strong>EXAMPLE:</strong></p>
+
+                <p><strong>1.</strong> In the srcFile configured to compile the Smarsh_Header file, wrap the desired block of header HTML with an element containing the <strong>ek-section="header"</strong> attribute.</p>
+
+                <p><strong>2</strong> When you compile the Smarsh_Header.ascx file, you can see that only the block of HTML that was wrapped in the <strong>ek-section="header"</strong> tags was used during compilation.  Rest of the HTML in the srcFile has been omitted.</p>
+
+                <div class="row">
+                  <div class="col-md-5">
+                    <p><strong>Smarsh_Header.ascx srcFile:</strong></p>
+                    <img src="img/headerHTML.png" alt="">
+                  </div>
+                  <div class="col-md-7">
+                    <p><strong>Compiled Smarsh_Header.ascx:</strong></p>
+                    <img src="img/headerResult.png" alt="">
+                  </div>
+                </div>
+
+              </li>
+
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>footer:</span>
+                  This will control the name of the project directory created.  In this example, the project directory will be called "ST_www_tompkinsfinancial_com_01".
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>body:</span>
+                  The date in which the project is started on.  The <strong>description.txt</strong> file will be written with the date provided.
+                </p>
+              </li>
+            </ul>
+
+          </section>
+
+
+          <!-- ARTICLE : EK-TYPE -->
+          <section id="article-ek-type">
+            <h2>ek-type</h2>
             <p>Within the srcFile that is configured to compile the Smarsh_Header.ascx, you must wrap the section of the HTML with an element containing the <strong>ek-section="header"</strong> attribute.  This will allow the compiler to designate which area of the HTML that will be used to compile the Smarsh.Header.ascx file.</p>
 
-            <p><strong>EXAMPLE:</strong></p>
+            <ul class="list-description">
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>content:</span>
+                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                </p>
+              </li>
 
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>contentblock:</span>
+                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>contenttitle:</span>
+                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                </p>
+              </li>
+
+
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>disclaimer:</span>
+                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                </p>
+              </li>
+
+
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>footerlogo:</span>
+                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>formblock:</span>
+                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>globalfooter1 || globalfooter2:</span>
+                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>globalheader1 || globalheader2:</span>
+                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>headerlogo:</span>
+                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>relatedarticles:</span>
+                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>topnav:</span>
+                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                </p>
+              </li>
+
+            </ul>
 
           </section>
 
-          <!-- ek-section="header" -->
-          <section id="article-ek-section-header">
-            <h3>ek-section = "header"</h3>
+
+          <!-- ARTICLE : EK-source -->
+          <section id="article-ek-source">
+            <h2>ek-source</h2>
             <p>Within the srcFile that is configured to compile the Smarsh_Header.ascx, you must wrap the section of the HTML with an element containing the <strong>ek-section="header"</strong> attribute.  This will allow the compiler to designate which area of the HTML that will be used to compile the Smarsh.Header.ascx file.</p>
 
-            <p><strong>EXAMPLE:</strong></p>
+            <ul class="list-description">
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>link:</span>
+                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                </p>
+              </li>
 
+              <li>
+                <p>
+                  <span><i class="glyphicon glyphicon-plus"></i>script:</span>
+                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                </p>
+              </li>
 
-          </section>
-
-
-
-          <!-- ek-section="body" -->
-          <section id="article-ek-section-body">
-            <h3>ek-section = "body"</h3>
-            <p>Within the srcFile that is configured to compile the Smarsh_Header.ascx, you must wrap the section of the HTML with an element containing the <strong>ek-section="header"</strong> attribute.  This will allow the compiler to designate which area will be compiled into Smarsh.Header.ascx while omitting the rest of the file.</p>
-
-            <p><strong>EXAMPLE:</strong></p>
-
-          </section>
-
-          <!-- ek-section="footer" -->
-          <section id="article-ek-section-footer">
-            <h3>ek-section = "footer"</h3>
-            <p>Within the srcFile that is configured to compile the Smarsh_Header.ascx, you must wrap the section of the HTML with an element containing the <strong>ek-section="header"</strong> attribute.  This will allow the compiler to designate which area will be compiled into Smarsh.Header.ascx while omitting the rest of the file.</p>
-
-            <p><strong>EXAMPLE:</strong></p>
-
+            </ul>
 
           </section>
+
 
 
 
