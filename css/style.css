@@ -1,6 +1,11 @@
 body {
-    font-family: "Raleway", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: "Lato", "Raleway", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
+}
+
+p {
+  font-family: "Lato", "Raleway", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 16px;
 }
 
 a {
@@ -116,17 +121,18 @@ ul.list-description {
 
 ul.list-description span{
     font-weight: bold;
+    font-size: 1.4em;
 }
 
 ul.list-description span i{
     margin-right: 5px;
 }
 
-h2 {
+h1 {
   font-weight: bold;
 }
 
-h3, h4 {
+h2, h3, h4 {
   color: #337ab7;
   font-weight: bold;
 }
