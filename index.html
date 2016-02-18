@@ -347,6 +347,12 @@
             <h4>compileFiles</h4>
             <p>Often times, not all of our files will be used as the srcFile for a UserControls or Layouts file.  However, if you still want to compile a group of files, you can use the <strong>compileFiles</strong> command to do so.  You specify these files within the <strong>compileFiles</strong> array property in the compileConfig.json file.</p>
 
+            <img src="img/compileFiles.png" alt="">
+
+            <p>In this case, if you run the <strong>compileFiles</strong> command in the terminal, each of the files listed in the array of the "compileFiles" property will be compiled. </p>
+
+            <p><strong>NOTE:</strong> The portion of the HTML that needs to be compiled still needs to be wrapped in the <strong>ek-section="body"</strong> tag.  </p>
+
           </section>
 
 
@@ -366,12 +372,36 @@
           <!-- Section TITLE -->
           <h2>Compiler Tags</h2>
 
-          <!-- ek-section section -->
-          <section id="article-ek-section">
-            <h4>ek-section = "header" || "body" || "footer" ||</h4>
-            <p>This command is used to initialize the project folder.  Before any compiling can be done, this directory needs to be executed.  This command will create the base project folder in the rootDir path assigned in the <b>compileConfig.json</b> file.</p>
+          <!-- ek-section="header" -->
+          <section id="article-ek-section-header">
+            <h4>ek-section = "header"</h4>
+            <p>Within the srcFile that is configured to compile the Smarsh_Header.ascx, you must wrap the section of the HTML with an element containing the <strong>ek-section="header"</strong> attribute.  This will allow the compiler to designate which area will be compiled into Smarsh.Header.ascx while omitting the rest of the file.</p>
+
+            <p><strong>EXAMPLE:</strong></p>
 
           </section>
+
+
+
+          <!-- ek-section="body" -->
+          <section id="article-ek-section-body">
+            <h4>ek-section = "body"</h4>
+            <p>Within the srcFile that is configured to compile the Smarsh_Header.ascx, you must wrap the section of the HTML with an element containing the <strong>ek-section="header"</strong> attribute.  This will allow the compiler to designate which area will be compiled into Smarsh.Header.ascx while omitting the rest of the file.</p>
+
+            <p><strong>EXAMPLE:</strong></p>
+
+          </section>
+
+          <!-- ek-section="footer" -->
+          <section id="article-ek-section-footer">
+            <h4>ek-section = "footer"</h4>
+            <p>Within the srcFile that is configured to compile the Smarsh_Header.ascx, you must wrap the section of the HTML with an element containing the <strong>ek-section="header"</strong> attribute.  This will allow the compiler to designate which area will be compiled into Smarsh.Header.ascx while omitting the rest of the file.</p>
+
+            <p><strong>EXAMPLE:</strong></p>
+
+          </section>
+
+
 
           <!-- ek-type section -->
           <section id="article-ek-type">
@@ -388,8 +418,6 @@
           </section>
 
         </article> <!-- /end #section-compilerTag -->
-
-
 
       </div> <!-- /.col-sm-9 -->
 
