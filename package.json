@@ -1,0 +1,15 @@
+{
+  "name": "compiler-doc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "\u001b[A\u001b[B\u001b[D\u001b[A\u001b[D\u001b[B\u001b[C",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0"
+  }
+}
