@@ -427,7 +427,7 @@
 
                 <p><strong>1.</strong> In the srcFile configured to compile the Smarsh_Header file, wrap the desired block of header HTML with an element containing the <strong>ek-section="header"</strong> attribute.</p>
 
-                <p><strong>2</strong> When you compile the Smarsh_Header.ascx file, you can see that only the block of HTML that was wrapped in the <strong>ek-section="header"</strong> tags was used during compilation.  Rest of the HTML in the srcFile has been omitted.</p>
+                <p><strong>2.</strong> When you compile the Smarsh_Header.ascx file, you can see that only the block of HTML that was wrapped in the <strong>ek-section="header"</strong> tags was used during compilation.  Rest of the HTML in the srcFile has been omitted.</p>
 
                 <div class="row">
                   <div class="col-md-5">
@@ -447,6 +447,24 @@
                   <span><i class="glyphicon glyphicon-plus"></i>footer:</span>
                   Within the srcFile configured to compile the <strong>Smarsh_Footer</strong>, wrap the appropriate block of HTML that will be used for the compilation of the footer.  The compiler will parse this particular block of HTML, compile the different aspects of it, and then create the Smarsh_Footer.ascx file inside the UserControls directory.
                 </p>
+
+                <p><strong>EXAMPLE:</strong></p>
+
+                <p><strong>1.</strong> In the srcFile configured to compile the Smarsh_Footer file, wrap the desired block of header HTML with an element containing the <strong>ek-section="footer"</strong> attribute.</p>
+
+                <p><strong>2.</strong> When you compile the Smarsh_Footer.ascx file, you can see that only the block of HTML that was wrapped in the <strong>ek-section="footer"</strong> tags was used during compilation.  Rest of the HTML in the srcFile has been omitted.</p>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <p><strong>Smarsh_Footer.ascx srcFile:</strong></p>
+                    <img src="img/footerHTML.png" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <p><strong>Compiled Smarsh_Footer.ascx:</strong></p>
+                    <img src="img/footerResult.png" alt="">
+                  </div>
+                </div>
+
               </li>
 
               <li>
@@ -454,6 +472,24 @@
                   <span><i class="glyphicon glyphicon-plus"></i>body:</span>
                   Within the srcFile configured to compile any particular file, wrap the appropriate block of HTML that will be used for the compilation.  The compiler will parse this particular block of HTML, and compile appropriately.
                 </p>
+
+                <p><strong>EXAMPLE:</strong></p>
+
+                <p><strong>1.</strong> In the srcFile configured to compile the Smarsh_Header file, wrap the desired block of header HTML with an element containing the <strong>ek-section="header"</strong> attribute.</p>
+
+                <p><strong>2.</strong> When you compile the Smarsh_Header.ascx file, you can see that only the block of HTML that was wrapped in the <strong>ek-section="header"</strong> tags was used dur
+
+                <div class="row">
+                  <div class="col-md-5">
+                    <p><strong>Smarsh_Header.ascx srcFile:</strong></p>
+                    <img src="img/headerHTML.png" alt="">
+                  </div>
+                  <div class="col-md-7">
+                    <p><strong>Compiled Smarsh_Header.ascx:</strong></p>
+                    <img src="img/headerResult.png" alt="">
+                  </div>
+                </div>
+
               </li>
             </ul>
 
@@ -463,7 +499,7 @@
           <!-- ARTICLE : EK-TYPE -->
           <section id="article-ek-type">
             <h2>ek-type</h2>
-            <p>Within the srcFile that is configured to compile the Smarsh_Header.ascx, you must wrap the section of the HTML with an element containing the <strong>ek-section="header"</strong> attribute.  This will allow the compiler to designate which area of the HTML that will be used to compile the Smarsh.Header.ascx file.</p>
+            <p>The ek-type attribute </p>
 
             <ul class="list-description">
               <li>
