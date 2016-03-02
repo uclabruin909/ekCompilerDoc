@@ -44,46 +44,8 @@
                   <span class="lbl">Configuration</span>
               </a>
               <ul class="children nav-child unstyled small collapse-in" id="configuration-item-1">
-                  <li class="item-2 deeper parent">
-                      <a class="" href="#">
-                          <span data-toggle="collapse" data-parent="#configuration-group" href="#configuration-item-2" class="sign"><i class="glyphicon glyphicon-plus-sign icon-white"></i></span>
-                          <span class="lbl">compileConfig.json</span>
-                      </a>
-                      <ul class="children nav-child unstyled small collapse" id="configuration-item-2">
-                          <li class="item-3 current">
-                              <a class="" href="#">
-                                  <span class="sign"><i class="icon-play"></i></span>
-                                  <span class="lbl">Menu 1.1</span>
-                              </a>
-                          </li>
-                          <li class="item-4">
-                              <a class="" href="#">
-                                  <span class="sign"><i class="icon-play"></i></span>
-                                  <span class="lbl">Menu 1.2</span>
-                              </a>
-                          </li>
-                      </ul>
-                  </li>
-                  <li class="item-5 deeper parent">
-                      <a class="" href="#">
-                          <span data-toggle="collapse" data-parent="#menu-group-1" href="#sub-item-5" class="sign"><i class="glyphicon glyphicon-plus-sign icon-white"></i></span>
-                          <span class="lbl">assetFile.json</span>
-                      </a>
-                      <ul class="children nav-child unstyled small collapse" id="sub-item-5">
-                          <li class="item-6">
-                              <a class="" href="#">
-                                  <span class="sign"><i class="icon-play"></i></span>
-                                  <span class="lbl">Menu 2.1</span>
-                              </a>
-                          </li>
-                          <li class="item-7">
-                              <a class="" href="#">
-                                  <span class="sign"><i class="icon-play"></i></span>
-                                  <span class="lbl">Menu 2.2</span>
-                              </a>
-                          </li>
-                      </ul>
-                  </li>
+                <li><a href=""><span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>compileConfig.json</a></li>
+                <li><a href=""><span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>assetFile.json</a></li>
               </ul>
             </li>
           </ul>
@@ -470,14 +432,14 @@
               <li>
                 <p>
                   <span><i class="glyphicon glyphicon-plus"></i>body:</span>
-                  Within the srcFile configured to compile any particular file, wrap the appropriate block of HTML that will be used for the compilation.  The compiler will parse this particular block of HTML, and compile appropriately.
+                  Within the srcFile configured to compile any particular file, wrap the appropriate block of HTML that will be used for the compilation with the <strong>ek-section="body"</strong> tag.  The compiler will parse this particular block of HTML, and compile appropriately.
                 </p>
 
                 <p><strong>EXAMPLE:</strong></p>
 
-                <p><strong>1.</strong> In the srcFile configured to compile the Smarsh_Header file, wrap the desired block of header HTML with an element containing the <strong>ek-section="header"</strong> attribute.</p>
+                <p><strong>1.</strong> In the srcFile configured to compile a particular file, wrap the desired block of HTML with an element containing the <strong>ek-section="body"</strong> attribute.</p>
 
-                <p><strong>2.</strong> When you compile the Smarsh_Header.ascx file, you can see that only the block of HTML that was wrapped in the <strong>ek-section="header"</strong> tags was used dur
+                <p><strong>2.</strong> When you compile the Smarsh_Header.ascx file, you can see that only the block of HTML that was wrapped in the <strong>ek-section="body"</strong> tags was used dur
 
                 <div class="row">
                   <div class="col-md-5">
@@ -499,7 +461,7 @@
           <!-- ARTICLE : EK-TYPE -->
           <section id="article-ek-type">
             <h2>ek-type</h2>
-            <p>The ek-type attribute </p>
+            <p>In Ektron layouts, there are various server controls used for different purposes.  For instance, there is a specific syntax used for <strong>CMS Content Block, CMS Form Blocks, TopNav, Global Footers, Header Logo, etc</strong>.  By giving an element a <strong>ek-type=[key]</strong> attribute, the compiler can determine exactly how that particular element must be compiled depending on the name of the key.  The different ek-type keys are listed below: </p>
 
             <ul class="list-description">
               <li>
@@ -507,6 +469,18 @@
                   <span><i class="glyphicon glyphicon-plus"></i>content:</span>
                   This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
                 </p>
+
+                <p><strong>2.</strong> When you compile the Smarsh_Header.ascx file, you can see that only the block of HTML that was wrapped in the <strong>ek-section="body"</strong> tags was used dur
+
+                <div class="row">
+                  <div class="col-md-5">
+                    <p><strong>Smarsh_Header.ascx srcFile:</strong></p>
+                    <img src="img/headerHTML.png" alt="">
+                  </div>
+                  <div class="col-md-7">
+                    <p><strong>Compiled Smarsh_Header.ascx:</strong></p>
+                    <img src="img/headerResult.png" alt="">
+                  </div>
               </li>
 
               <li>
