@@ -103,9 +103,6 @@
                       </ul>
                   </li>
 
-                  <li><a href=""><span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>ek-asset</a></li>
-
-                  <li><a href=""><span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>ek-name</a></li>
                   <!-- //ek-types -->
                   <li class="item-2 deeper parent">
                       <a class="" href="#">
@@ -155,6 +152,12 @@
                           </li>
                       </ul>
                   </li>
+
+                  <!-- ek-asset -->
+                  <li><a href=""><span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>ek-asset</a></li>
+
+                  <!-- //ek-name -->
+                  <li><a href=""><span class="final"><i class="glyphicon glyphicon-chevron-right"></i></span>ek-name</a></li>
               </ul>
             </li>
           </ul>
@@ -375,7 +378,7 @@
 
           <!-- ARTICLE : EK-SECTION -->
           <section id="article-ek-section">
-            <h2>ek-section</h2>
+            <h2>ek-section = "header" || "footer" || "body"</h2>
             <p>The <strong>ek-section</strong> attribute allows the user to designate the areas of the HTML that will be compiled.  By segmenting different parts of the HTML with an ek-section element, the compiler will know exactly which block of HTML to use to compile the Smarsh_Header, Smarsh_Footer as well as the different layout files.  Remember, it will use the srcFile specified in the compileConfig.json file.</p>
 
             <ul class="list-description">
@@ -467,10 +470,12 @@
               <li>
                 <p>
                   <span><i class="glyphicon glyphicon-plus"></i>content:</span>
-                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                  One of the
                 </p>
 
-                <p><strong>2.</strong> When you compile the Smarsh_Header.ascx file, you can see that only the block of HTML that was wrapped in the <strong>ek-section="body"</strong> tags was used dur
+                <p><strong>1.</strong> When you compile the Smarsh_Header.ascx file, you can see that only the block of HTML that was wrapped in the <strong>ek-section="body"</strong> tags was used dur</p>
+
+                <p><strong>2.</strong> When you compile the Smarsh_Header.ascx file, you can see that only the block of HTML that was wrapped in the <strong>ek-section="body"</strong> tags was used dur</p>
 
                 <div class="row">
                   <div class="col-md-5">
