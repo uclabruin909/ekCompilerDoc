@@ -470,21 +470,21 @@
               <li>
                 <p>
                   <span><i class="glyphicon glyphicon-plus"></i>content:</span>
-                  One of the
+                  When an element is given an <strong>ek-type="content"</strong> attribute, the compiler will convert the entire block of the element into a separate HTML file and save it within the <strong>CONTENT</strong> directory.  <strong>NOTE: an ek-type="content" element must also have an ek-name=[contentname] attribute attached tp ot so that the compiler can know what to name of the file. </strong>
                 </p>
 
-                <p><strong>1.</strong> When you compile the Smarsh_Header.ascx file, you can see that only the block of HTML that was wrapped in the <strong>ek-section="body"</strong> tags was used dur</p>
+                <p><strong>1.</strong>Attach the <strong>ek-type="content"</strong> attribute to block of HTML you wish to convert.  Make sure to attach a <strong>ek-name=[contentname]</strong> attribute to the element as well. </p>
 
-                <p><strong>2.</strong> When you compile the Smarsh_Header.ascx file, you can see that only the block of HTML that was wrapped in the <strong>ek-section="body"</strong> tags was used dur</p>
+                <p><strong>2.</strong>When the contentblock is finished compiling, you will see that a HTML file created with the name specified on the ek-name attribute.  </p>
 
                 <div class="row">
                   <div class="col-md-5">
-                    <p><strong>Smarsh_Header.ascx srcFile:</strong></p>
-                    <img src="img/headerHTML.png" alt="">
+                    <p><strong>Wrapped ek-type="content" element:</strong></p>
+                    <img src="img/type-content.png" alt="">
                   </div>
                   <div class="col-md-7">
-                    <p><strong>Compiled Smarsh_Header.ascx:</strong></p>
-                    <img src="img/headerResult.png" alt="">
+                    <p><strong>HTML block of wrapped element. </strong></p>
+                    <img src="img/type-content-compiled.png" alt="">
                   </div>
               </li>
 
