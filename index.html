@@ -479,7 +479,7 @@
 
                 <p><strong>1.</strong>Attach the <strong>ek-type="content"</strong> attribute to block of HTML you wish to convert.  Make sure to attach a <strong>ek-name=[contentname]</strong> attribute to the element as well. </p>
 
-                <p><strong>2.</strong>When the contentblock is finished compiling, you will see that a HTML file created with the name specified on the ek-name attribute.  </p>
+                <p><strong>2.</strong>When the content is finished compiling, you will see that a HTML file created with the name specified on the ek-name attribute.  </p>
 
                 <div class="row">
                   <div class="col-md-5">
@@ -490,20 +490,54 @@
                     <p><strong>HTML block of wrapped element. </strong></p>
                     <img src="img/type-content-compiled.png" alt="">
                   </div>
+                </div>
               </li>
 
               <li>
                 <p>
                   <span><i class="glyphicon glyphicon-plus"></i>contentblock:</span>
-                  When an element is given an <strong>ek-type="contentblock"</strong> attribute, the compiler will convert the entire element into a Ektron CMS:Contentblock server control tag. <strong>NOTE: an ek-type="contentblock" element must also have an ek-name=[contentname] attribute attached to it.  The compiler will use this name as the ID value for the contentblock. </strong>
+                  When an element is given an <strong>ek-type="contentblock"</strong> attribute, the compiler will convert the entire element into an Ektron CMS:Contentblock server control tag depending for the appropraite Layout specified in the compileConfig.json file. <strong>NOTE: an ek-type="contentblock" element must also have an ek-name=[contentblockname] attribute attached to it.  The compiler will use this name as the ID value for the contentblock. </strong>
                 </p>
+
+                <p><strong>1.</strong>Attach the <strong>ek-type="contentblock"</strong> attribute to block of HTML you wish to convert.  Make sure to attach a <strong>ek-name=[contentblockname]</strong> attribute to the element as well. </p>
+
+                <p><strong>2.</strong>When the contentblock is finished compiling, you will see that within the specified layout, the entire block of HTML has now been converted into a Ektron CMS:Contentblock server control tag with the ek-name=[contentblockname] assigned to the ID attribute.</p>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <p><strong>Element wrapped with ek-type="contentblock" and ek-name="contentblockname" attributes:</strong></p>
+                    <img src="img/type-contentblock.png" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <p><strong>Within the appropriate layout, the wrapped element has now been converted. </strong></p>
+                    <img src="img/type-contentblock-compiled.png" alt="">
+                  </div>
+                </div>
+
+
               </li>
 
               <li>
                 <p>
                   <span><i class="glyphicon glyphicon-plus"></i>contenttitle:</span>
-                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                  In order to convert a particular a element into a <strong>ContentTitle</strong> server control, you simply have to assign the element an <strong>ek-name="contenttitle"</strong> attribute.
                 </p>
+
+                <p><strong>1.</strong>Attach the <strong>ek-type="contentitle"</strong> attribute to block of HTML you wish to convert.</p>
+
+                <p><strong>2.</strong>The element is compiled into the Ektron contenttitle server controls that will automatically pull the name of that particular content</p>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <p><strong>Element wrapped with ek-type="contenttitle":</strong></p>
+                    <img src="img/type-contenttitle.png" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <p><strong>The element is compiled into the contenttitle server control on the Layout.aspx file </strong></p>
+                    <img src="img/type-contenttitle-compiled.png" alt="">
+                  </div>
+                </div>
+
               </li>
 
 
@@ -592,8 +626,6 @@
             </ul>
 
           </section>
-
-
 
 
 
