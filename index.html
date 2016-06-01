@@ -581,8 +581,24 @@
               <li>
                 <p>
                   <span><i class="glyphicon glyphicon-plus"></i>formblock:</span>
-                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                  When an element is given an <strong>ek-type="formblock"</strong> attribute, the compiler will convert the entire element into an Ektron CMS:FormBlock server control tag depending for the appropraite Layout specified in the compileConfig.json file. <strong>NOTE: an ek-type="formblock" element must also have an ek-name=[formblockname] attribute attached to it.  The compiler will use this name as the ID value for the formblock. </strong>
                 </p>
+
+                <p><strong>1.</strong>Attach the <strong>ek-type="formblock"</strong> attribute to block of HTML you wish to convert.  Make sure to attach a <strong>ek-name=[formblockname]</strong> attribute to the element as well. </p>
+
+                <p><strong>2.</strong>When the formblock is finished compiling, you will see that within the specified layout, the entire block of HTML has now been converted into a Ektron CMS:Formblock server control tag with the ek-name=[formblockname] assigned to the ID attribute.</p>
+                </p>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <p><strong>Element wrapped with ek-type="formblock":</strong></p>
+                    <img src="img/type-formblock.png" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <p><strong>The element is compiled into the formblock server control.  </strong></p>
+                    <img src="img/type-formblock-compiled.png" alt="">
+                  </div>
+                </div> <!-- /.row -->
 
               </li>
 
