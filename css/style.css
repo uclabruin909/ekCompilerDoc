@@ -119,6 +119,10 @@ ul.list-description {
     padding: 0px;
 }
 
+ul.list-description > li {
+  margin-bottom: 25px;
+}
+
 ul.list-description span{
     font-weight: bold;
     font-size: 1.4em;
