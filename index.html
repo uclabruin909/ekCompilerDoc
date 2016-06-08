@@ -706,8 +706,19 @@
               <li>
                 <p>
                   <span><i class="glyphicon glyphicon-plus"></i>link:</span>
-                  This is the name of the company that the site will be created for.  The <strong>description.txt</strong> file will be written with the name provided.
+                  When you assign a link element with an ek-source attribute with a <strong>link</strong> value, the compiler convert the source of the file to the appropriate path of the project directory.
                 </p>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p><strong>Element wrapped with ek-source="link":</strong></p>
+                      <img src="img/source-link.png" alt="">
+                    </div>
+                    <div class="col-md-6">
+                      <p><strong>The compiler will adjust file path to the appropriate project directory path.</strong></p>
+                      <img src="img/source-link-compiled.png" alt="">
+                    </div>
+                  </div> <!-- /.row -->                
               </li>
 
               <li>
